@@ -1,25 +1,13 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-export default Services = () => {
+export default Home = () => {
   const [fontDumb, setFontDumb] = useState(false);
   return (
     <View style={styles.container}>
       <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>جاليري</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>أخبار</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
         <Text style={fontDumb ? styles.touchDumb : styles.touch}>
-          فعاليات ومعارض
-        </Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>
-          بيع واشتري
+          تسجيل الدخول
         </Text>
       </TouchableOpacity>
 

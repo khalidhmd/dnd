@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Home from "./screens/home";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
+import SignIn from "./screens/signin";
+import Services from "./screens/services";
+import Splash from "./screens/splash";
 
 const appInit = async () => {
   Font.loadAsync({
@@ -10,8 +13,9 @@ const appInit = async () => {
 };
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
+
   if (fontsLoaded) {
-    return <Home />;
+    return <SignIn />;
   } else {
     return (
       <AppLoading startAsync={appInit} onFinish={() => setFontsLoaded(true)} />

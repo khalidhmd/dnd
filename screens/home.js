@@ -6,11 +6,6 @@ export default Home = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>
-          تسجيل الدخول
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
         <Text style={fontDumb ? styles.touchDumb : styles.touch}>جاليري</Text>
       </TouchableOpacity>
       <TouchableOpacity>
@@ -24,11 +19,7 @@ export default Home = () => {
       <TouchableOpacity>
         <Text style={fontDumb ? styles.touchDumb : styles.touch}>تسوق</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>
-          بيع واشتري
-        </Text>
-      </TouchableOpacity>
+
       <TouchableOpacity>
         <Text style={fontDumb ? styles.touchDumb : styles.touch}>خدمات</Text>
       </TouchableOpacity>
@@ -45,6 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: "yellow",
     alignItems: "center",
     justifyContent: "center",
+    borderRadius: 5,
   },
   touch: {
     padding: 7,
@@ -54,6 +46,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 20,
+    borderRadius: 5,
   },
   touchDumb: {
     padding: 7,
@@ -63,5 +56,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 30,
     fontFamily: "NABILMENASY1",
+    borderRadius: 5,
   },
 });
