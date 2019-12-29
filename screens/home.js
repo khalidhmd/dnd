@@ -1,61 +1,11 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import React from "react";
+import Home from "../components/home";
+import FontContextProvider from "../contexts/fontContext";
 
-export default Home = () => {
-  const [fontDumb, setFontDumb] = useState(false);
+export default HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>جاليري</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>أخبار</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>
-          فعاليات ومعارض
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>تسوق</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>خدمات</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setFontDumb(prevState => !prevState)}>
-        <Text style={fontDumb ? styles.touchDumb : styles.touch}>اللغة</Text>
-      </TouchableOpacity>
-    </View>
+    <FontContextProvider>
+      <Home navigation={navigation} />
+    </FontContextProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "yellow",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 5,
-  },
-  touch: {
-    padding: 7,
-    backgroundColor: "orange",
-    margin: 5,
-    width: 200,
-    textAlign: "center",
-    fontWeight: "bold",
-    fontSize: 20,
-    borderRadius: 5,
-  },
-  touchDumb: {
-    padding: 7,
-    backgroundColor: "orange",
-    margin: 5,
-    minWidth: 300,
-    textAlign: "center",
-    fontSize: 30,
-    fontFamily: "NABILMENASY1",
-    borderRadius: 5,
-  },
-});
